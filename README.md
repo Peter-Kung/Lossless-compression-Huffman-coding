@@ -27,37 +27,37 @@ Decode Data:
 
 ```
 $ cat HuffmanCode.txt
-T 0000
-G 0001
-I 0010
-M 0011
-Y 0100
-W 0101
-D 0110
-N 0111
-H 10000
-S 10001
-K 10010
-J 10011
-X 10100
-B 10101
-F 10110
-R 10111
-O 11000
-E 11001
-C 11010
-P 11011
-U 11100
-Z 11101
-V 111100
-A 111101
-L 111110
-Q 111111
+O 0000
+E 0001
+C 0010
+P 0011
+U 0100
+Z 0101
+V 01100
+A 01101
+L 01110
+Q 01111
+T 10000
+G 10001
+I 10010
+M 10011
+Y 10100
+W 10101
+D 10110
+N 10111
+H 11000
+S 11001
+K 11010
+J 11011
+X 11100
+B 11101
+F 11110
+R 11111
 ```
 
-4 bits * 8 alphabets + 5 bits * 14 alphabets + 4 bits * 6 alphabets = 126
+4 bits * 6 alphabets + 5 bits * 20 alphabets = 124
 
-Compression rate = ( 1 - (126 / 8008)) * 100% = 98%
+Compression rate = ( 1 - (124 / 8008)) * 100% = 98%
 
 
 ## How to use

@@ -13,6 +13,7 @@ TreeNode_t *createHuffmanTree(TreeNode_t **heap, int *last)
 		
 		TreeNode_t *nodec = (TreeNode_t *)malloc(sizeof(TreeNode_t));
 		nodec->quntity = nodea->quntity + nodeb->quntity;
+		
 
 		strcpy(nodec->alphabet, nodea->alphabet);
 		strcat(nodec->alphabet, nodeb->alphabet);
@@ -21,6 +22,12 @@ TreeNode_t *createHuffmanTree(TreeNode_t **heap, int *last)
 		nodec->right = nodeb;
 
 		push(heap, nodec, last);
+/*
+		puts("-------------------");
+		for (int i = 1;i <= *last;++i) {
+			printf("%s: %d\n", heap[i]->alphabet, heap[i]->quntity);
+		}
+*/
 	}
 
 

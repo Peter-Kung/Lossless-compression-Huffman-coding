@@ -21,4 +21,4 @@ make_client:
 	$(CC)  $(MINHEAP_TEST) $(CFLAG) $(OBJ)
 
 clean:
-	rm decoding.txt encoding.txt HuffmanCode.txt
+	rm decoding.txt encoding.txt HuffmanCode.txt client

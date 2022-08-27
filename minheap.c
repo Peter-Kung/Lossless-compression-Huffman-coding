@@ -36,25 +36,32 @@ TreeNode_t *pop(TreeNode_t **heap, int *tail)
 	heap[1] = heap[(*tail)--];
 
 	int cur = 1;
-	while ((2 * cur <= *tail) && (2 * cur + 1 <= *tail) && 
-			(heap[cur]->quntity > heap[cur * 2]->quntity || heap[cur]->quntity > heap[cur * 2 + 1]->quntity)
+	while (((2 * cur <= *tail) &&  (heap[cur]->quntity > heap[cur * 2]->quntity)) || 
+			((2 * cur + 1 <= *tail) && (heap[cur]->quntity > heap[cur * 2 + 1]->quntity))
 		) {
 		
-		int nodea =  heap[cur * 2]->quntity;
-	       	int nodeb =  heap[cur * 2 + 1]->quntity; 
-		
-		if (nodea < nodeb) {
+		if ((2 * cur <= *tail) && (2 * cur + 1 <= *tail)) {
+			int nodea =  heap[cur * 2]->quntity;
+	       		int nodeb =  heap[cur * 2 + 1]->quntity; 
+
+			if (nodea < nodeb) {
 			
+				TreeNode_t *tmp  = heap[cur * 2];
+				heap[cur * 2] = heap[cur];
+				heap[cur] = tmp;
+				cur = cur*2;
+
+			} else {
+				TreeNode_t *tmp  = heap[cur * 2 + 1];
+				heap[cur * 2 + 1] = heap[cur];
+				heap[cur] = tmp;
+				cur = cur*2 + 1;
+			}
+		} else if ( 2 * cur <= *tail) {
 			TreeNode_t *tmp  = heap[cur * 2];
 			heap[cur * 2] = heap[cur];
 			heap[cur] = tmp;
 			cur = cur*2;
-
-		} else {
-			TreeNode_t *tmp  = heap[cur * 2 + 1];
-			heap[cur * 2 + 1] = heap[cur];
-			heap[cur] = tmp;
-			cur = cur*2 + 1;
 		}
 	}
 	return  result;

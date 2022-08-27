@@ -57,11 +57,16 @@ int main()
 		putchar(c);
 		count[c - 'A']++;
 	}
-
+	
+	int diff_count = 0;
 	for (int i = 0;i < 26;++i)
 		if (count[i] != 0) {
+			diff_count++;
+			printf("%c: %d\n",'A' + i, count[i]); 
                 	push(heap, createNode('A' + i, count[i]), &tail);
 		}
+	
+	printf("diff count: %d\n", diff_count);
 
 	TreeNode_t *root = createHuffmanTree(heap, &tail);
 

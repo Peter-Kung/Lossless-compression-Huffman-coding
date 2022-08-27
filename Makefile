@@ -19,3 +19,6 @@ pop_test:
 
 make_client:
 	$(CC)  $(MINHEAP_TEST) $(CFLAG) $(OBJ)
+
+clean:
+	rm decoding.txt encoding.txt HuffmanCode.txt

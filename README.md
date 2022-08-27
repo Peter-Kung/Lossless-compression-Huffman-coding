@@ -54,10 +54,16 @@ Compression rate = ( 1 - (126 / 8008)) * 100% = 98%
 ## How to use
 
 ```
-$make
+$ make
 ```
 
-it will spawn three file:
+it will spawn object file `client`, then execute `client`
+
+```
+./client
+```
+
+it will spawn three files:
 - HuffmanCode.txt: alphabet symbal table
 - encoding.txt: target comparess file
 - decoding.txt: decode encoding data into original data

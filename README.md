@@ -10,8 +10,17 @@ This project use minheap to make huffman tree, and use huffman tree get symbal t
 ## Compression rate
 
 ```
-$ wc -m OriginalData.txt
-1001 OriginalData.txt
+$ ./client
+...
+...
+W: 35
+X: 41
+Y: 35
+Z: 48
+diff count: 26
+Decode Data:
+...
+...
 ```
 
 26 * 8bits = 8008

@@ -1,6 +1,6 @@
 # Huffman Compression
 
-## Introduce 
+## Introduction
 
 In non-loss data compression, Huffman code is a wide range utilization and effective way. It compression concept is make a symbal base on it's appear frequency.
 
@@ -55,7 +55,7 @@ L 111110
 Q 111111
 ```
 
-4 * 8 + 5 * 14 + 4 * 6 = 126
+4 bits * 8 alphabets + 5 bits * 14 alphabets + 4 bits * 6 alphabets = 126
 
 Compression rate = ( 1 - (126 / 8008)) * 100% = 98%
 
@@ -69,7 +69,7 @@ $ make
 it will spawn object file `client`, then execute `client`
 
 ```
-./client
+$ ./client
 ```
 
 it will spawn three files:

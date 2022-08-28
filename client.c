@@ -44,7 +44,7 @@ int main()
 	srand(time(NULL));
 	
 	TreeNode_t **heap;
-	int index = 10;
+	int index = 100;
 	heap = createMinHeap(index);
 	int tail = 0;
 
